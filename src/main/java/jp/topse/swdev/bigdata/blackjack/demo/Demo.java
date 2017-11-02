@@ -11,17 +11,38 @@ import jp.topse.swdev.bigdata.blackjack.Result;
 public class Demo {
 
     public static void main(String[] args) {
-        for (int i = 0; i < 1000; ++i) {
-            doOneGame();
+
+        Player[] players = new Player[] {
+                new Player("Aice"), new Player("Bob"), new Player("Charlie"),
+                new Player("Dave"), new Player("Ellen"), new Player("Frank"),
+        };
+        Demo demo = new Demo(players);
+        demo.eval();
+    }
+
+    private Player[] players = null;
+
+    public Demo(Player[] players) {
+        this.players = players;
+    }
+
+    private void eval() {
+        Permutations<Player> permutations = new Permutations<Player>(players);
+        while (permutations.hasNext()) {
+            Player[] list = permutations.next();
+            for (int i = 0; i < 100; ++i) {
+                doOneGame(list);
+            }
         }
     }
 
-    private static void doOneGame() {
+    private void doOneGame(Player[] players) {
         Deck deck = Deck.createDefault();
         Game game = new Game(deck);
-        game.join(new Player("Alice"));
-        game.join(new Player("Bob"));
-        game.join(new Player("Charlie"));
+
+        for (Player player : players) {
+            game.join(player);
+        }
         game.setup();
         game.start();
 
