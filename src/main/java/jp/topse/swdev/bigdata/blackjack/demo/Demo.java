@@ -37,7 +37,7 @@ public class Demo {
     }
 
     private void doOneGame(Player[] players) {
-        Deck deck = Deck.createDefault();
+        Deck deck = Deck.createTestDeck();
         Game game = new Game(deck);
 
         for (Player player : players) {
