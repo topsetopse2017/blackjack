@@ -27,21 +27,57 @@ public class Deck {
         return new Deck(map);
     }
 
-    public static Deck createTestDeck() {
+    public static Deck createTest1Deck() {
         Map<Card, Integer> map = new HashMap<Card, Integer>();
-        map.put(Card.TWO,   4);
-        map.put(Card.THREE, 4);
-        map.put(Card.FOUR,  4);
-        map.put(Card.FIVE,  3);
-        map.put(Card.SIX,   3);
-        map.put(Card.SEVEN, 3);
-        map.put(Card.EIGHT, 2);
-        map.put(Card.NINE,  2);
-        map.put(Card.TEN,   2);
+        map.put(Card.TWO,   5);
+        map.put(Card.THREE, 5);
+        map.put(Card.FOUR,  5);
+        map.put(Card.FIVE,  4);
+        map.put(Card.SIX,   4);
+        map.put(Card.SEVEN, 4);
+        map.put(Card.EIGHT, 3);
+        map.put(Card.NINE,  3);
+        map.put(Card.TEN,   3);
+        map.put(Card.JACK,  2);
+        map.put(Card.QUEEN, 2);
+        map.put(Card.KING,  2);
+        map.put(Card.ACE,   5);
+        return new Deck(map);
+    }
+
+    public static Deck createTest2Deck() {
+        Map<Card, Integer> map = new HashMap<Card, Integer>();
+        map.put(Card.TWO,   100);
+        map.put(Card.THREE, 100);
+        map.put(Card.FOUR,  100);
+        map.put(Card.FIVE,  100);
+        map.put(Card.SIX,   100);
+        map.put(Card.SEVEN, 100);
+        map.put(Card.EIGHT, 100);
+        map.put(Card.NINE,  100);
+        map.put(Card.TEN,   100);
+        map.put(Card.JACK,  100);
+        map.put(Card.QUEEN, 100);
+        map.put(Card.KING,  100);
+        map.put(Card.ACE,   100);
+        return new Deck(map);
+    }
+
+    public static Deck createTest3Deck() {
+        Map<Card, Integer> map = new HashMap<Card, Integer>();
+        map.put(Card.TWO,   10);
+        map.put(Card.THREE, 1);
+        map.put(Card.FOUR,  1);
+        map.put(Card.FIVE,  1);
+        map.put(Card.SIX,   10);
+        map.put(Card.SEVEN, 1);
+        map.put(Card.EIGHT, 1);
+        map.put(Card.NINE,  1);
+        map.put(Card.TEN,   10);
         map.put(Card.JACK,  1);
         map.put(Card.QUEEN, 1);
-        map.put(Card.KING,  1);
-        map.put(Card.ACE,   1);
+        map.put(Card.KING,  5);
+        map.put(Card.ACE,   5);
         return new Deck(map);
     }
 
