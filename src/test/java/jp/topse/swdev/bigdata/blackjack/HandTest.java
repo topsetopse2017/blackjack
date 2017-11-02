@@ -17,6 +17,7 @@ public class HandTest {
         hand.add(Card.THREE);
 
         assertThat(hand.eval(), is(5));
+        assertThat(hand.getCount(), is(2));
     }
 
     @Test
@@ -26,6 +27,7 @@ public class HandTest {
         hand.add(Card.KING);
 
         assertThat(hand.eval(), is(14));
+        assertThat(hand.getCount(), is(2));
     }
 
     @Test
@@ -35,6 +37,7 @@ public class HandTest {
         hand.add(Card.EIGHT);
 
         assertThat(hand.eval(), is(19));
+        assertThat(hand.getCount(), is(2));
     }
 
 }

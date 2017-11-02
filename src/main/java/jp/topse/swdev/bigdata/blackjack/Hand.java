@@ -10,6 +10,10 @@ public class Hand {
 
     private List<Card> cards = new LinkedList<Card>();
 
+    public int getCount() {
+        return cards.size();
+    }
+
     public void add(Card card) {
         cards.add(card);
     }
