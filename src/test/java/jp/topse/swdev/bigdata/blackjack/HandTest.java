@@ -40,4 +40,39 @@ public class HandTest {
         assertThat(hand.getCount(), is(2));
     }
 
+    @Test
+    public void AceCanBe1() {
+        Hand hand = new Hand();
+        hand.add(Card.ACE);
+        hand.add(Card.FOUR);
+        hand.add(Card.SEVEN);
+
+        assertThat(hand.eval(), is(12));
+        assertThat(hand.getCount(), is(3));
+    }
+
+    @Test
+    public void AceCanBe1EvenIfMoreThanOneAcesAreIncluded() {
+        Hand hand = new Hand();
+        hand.add(Card.ACE);
+        hand.add(Card.FOUR);
+        hand.add(Card.ACE);
+        hand.add(Card.SEVEN);
+
+        assertThat(hand.eval(), is(13));
+        assertThat(hand.getCount(), is(4));
+    }
+
+    @Test
+    public void AceCanBe1UpTo21() {
+        Hand hand = new Hand();
+        hand.add(Card.ACE);
+        hand.add(Card.FOUR);
+        hand.add(Card.ACE);
+        hand.add(Card.THREE);
+
+        assertThat(hand.eval(), is(19));
+        assertThat(hand.getCount(), is(4));
+    }
+
 }
